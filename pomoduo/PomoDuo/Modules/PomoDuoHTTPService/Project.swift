@@ -1,6 +1,6 @@
 import ProjectDescription
 
-let featureName = "PomoDuoNetworking"
+let featureName = "PomoDuoHTTPService"
 
 let project = Project(
     name: featureName,
@@ -10,8 +10,9 @@ let project = Project(
             destinations: [.mac],
             product: .framework,
             bundleId: "dev.eliudiaz.\(featureName)",
+            sources: "Sources/**",
             dependencies: [
-                .external(name: "Factory")
+                .external(name: "FactoryKit")
             ]
         ),
         .target(
@@ -21,7 +22,9 @@ let project = Project(
             bundleId: "dev.eliudiaz.\(featureName)Tests",
             sources: "Tests/**",
             dependencies: [
-                .target(name: featureName)
+                .target(name: featureName),
+                // According to the author, I shouldn't be importing FactoryKit in the Testing target, but given my current setup, I dunno of other way I can do this...
+                .external(name: "FactoryTesting")
             ]
         )
     ]

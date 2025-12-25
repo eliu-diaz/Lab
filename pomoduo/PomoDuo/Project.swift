@@ -21,7 +21,7 @@ let project = Project(
                 "PomoDuo/Resources",
             ],
             dependencies: [
-                .external(name: "Factory")
+                .external(name: "FactoryKit")
             ]
         ),
         .target(
