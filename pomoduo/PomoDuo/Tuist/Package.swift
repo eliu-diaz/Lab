@@ -9,7 +9,9 @@ import PackageDescription
         // Default is .staticFramework
         productTypes: [
             "FactoryKit": .staticFramework,
-            "FactoryTesting": .staticFramework
+            "FactoryTesting": .staticFramework,
+            "Afluent": .staticFramework,
+            "AfluentTesting": .staticFramework
         ],
     )
 #endif
@@ -19,6 +21,7 @@ let package = Package(
     dependencies: [
         // Add your own dependencies here:
          .package(url: "https://github.com/hmlongco/Factory", from: "2.5.0"),
+         .package(url: "https://github.com/Tyler-Keith-Thompson/Afluent", from: "1.0.0")
         // You can read more about dependencies here: https://docs.tuist.io/documentation/tuist/dependencies
     ]
 )
