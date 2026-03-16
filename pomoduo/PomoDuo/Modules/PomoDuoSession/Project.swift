@@ -7,7 +7,7 @@ let project = Project(
     targets: [
         .target(
             name: featureName,
-            destinations: [.mac],
+            destinations: [.mac, .iPhone],
             product: .framework,
             bundleId: "dev.eliudiaz.\(featureName)",
             sources: "Sources/**",
@@ -18,7 +18,7 @@ let project = Project(
         ),
         .target(
             name: "\(featureName)Tests",
-            destinations: [.mac],
+            destinations: [.mac, .iPhone],
             product: .unitTests,
             bundleId: "dev.eliudiaz.\(featureName)Tests",
             sources: "Tests/**",
