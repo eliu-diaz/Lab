@@ -1,8 +1,10 @@
 import SwiftUI
 
-struct PomoDuoTimer: View {
-    var body: some View {
-        Text("Hello World!")
+public struct PomoDuoTimer: View {
+    public init() { }
+    
+    public var body: some View {
+        Text("PomoDuoTimer screen")
     }
 }
 
